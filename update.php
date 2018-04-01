@@ -31,7 +31,7 @@ echo "<ul>
 }
 if (isset($_POST['new']))
 {
-$result1 = pg_query($db, "UPDATE book SET id = '$_POST[id_updated]', username = '$_POST[name_updated]', password = '$_POST[pass_updated]'");
+$result1 = pg_query($db, "UPDATE users SET id = '$_POST[id_updated]', username = '$_POST[name_updated]', password = '$_POST[pass_updated]'");
 if (!$result1)
 {
 echo "Update failed!!";
