@@ -9,7 +9,7 @@ li {listt-style: none;}
 <body>
 <h2>Enter information</h2>
 <ul>
-<form name="insert" action="insert.php" method="POST" >
+<form name="add" action="add.php" method="POST" >
 <li>ID:</li><li><input type="text" name="id" /></li>
 <li>Name:</li><li><input type="text" name="username" /></li>
 <li>Password:</li><li><input type="text" name="password" /></li>
