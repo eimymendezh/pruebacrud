@@ -10,7 +10,7 @@ li {list-style: none;}
 <ul>
 <form name="display" action="update.php" method="POST" >
 <li>ID:</li><li><input type="text" name="id" /></li>
-<li><input type="submit" name="submit" href="add.php"/></li>
+<li><input type="submit" name="submit" href="/add.php"/></li>
 </form>
 </ul>
 </body>
