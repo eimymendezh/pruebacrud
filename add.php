@@ -20,6 +20,6 @@ li {listt-style: none;}
 </html>
 <?php
 $db = pg_connect("host=localhost port=5432 dbname=eimybase user=postgres password=teleco");
-$query = "INSERT INTO users VALUES ('$_POST[id]','$_POST[username]','$_POST[password])";
+$query = "INSERT INTO users (id, username, password) VALUES ('".$_POST["id"]."', '".$_POST["username"]."', '".$_POST["password"]."')";
 $result = pg_query($query);
 ?>
