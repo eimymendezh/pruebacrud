@@ -23,15 +23,15 @@ if (isset($_POST['submit']))
 {
 echo "<ul>
 <form name='update' action='update.php' method='POST' >
-<li>ID:</li><li><input type="text" name="id" value='$row[id]'/></li>
-<li>Name:</li><li><input type="text" name="username" value='$row[username]'/></li>
-<li>Password:</li><li><input type="text" name="password" value='$row[password]'/></li>
+<li>ID:</li><li><input type="text" name="id_up" value='$row[id]'/></li>
+<li>Name:</li><li><input type="text" name="username_up" value='$row[username]'/></li>
+<li>Password:</li><li><input type="text" name="password_up" value='$row[password]'/></li>
 <li><input type='submit' name='new' /></li>  </form>
 </ul>";
 }
 if (isset($_POST['new']))
 {
-$result1 = pg_query($db, "UPDATE users SET (id, username, password) = ('".$_POST["id"]."', '".$_POST["username"]."', '".$_POST["password"]."')";
+$result1 = pg_query($db, "UPDATE users SET (id, username, password) = ('".$_POST["id_up"]."', '".$_POST["username_up"]."', '".$_POST["password_up"]."')";
 if (!$result1)
 {
 echo "Update failed!!";
