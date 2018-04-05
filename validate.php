@@ -35,7 +35,7 @@ $result1 = pg_query($db, "SELECT * FROM users where id = '$_POST[id_updated]'");
 $row = pg_fetch_assoc($result1);
 if (!$result1)
 {
-	if($row[password]=='$_POST[pass_updated]'){
+	if($row[password]==$_POST[pass_updated]){
 	echo "Correcto";		
 	}
 	else{
