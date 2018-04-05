@@ -31,10 +31,11 @@ echo "<ul>
 }
 if (isset($_POST['new']))
 {
-$result1 = pg_query($db, "SELECT password FROM users WHERE id = '$_POST[id]'");
+$result1 = pg_query($db, "SELECT * FROM users where id = '$_POST[id]'");	
+$row = pg_fetch_assoc($result1);
 if (!$result1)
 {
-	if($result1=='$_POST[pass_updated]'){
+	if($row[password]=='$_POST[pass_updated]'){
 	echo "Correcto";		
 	}
 	else{
