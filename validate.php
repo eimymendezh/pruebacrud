@@ -8,7 +8,7 @@ li {list-style: none;}
 <body>
 <h2>Usuarios</h2>
 <ul>
-<form name="display" action="update.php" method="POST" >
+<form name="display" action="validate.php" method="POST" >
 <li>ID:</li><li><input type="text" name="id" /></li>
 <li><input type="submit" name="submit" href="/add.php"/></li>
 </form>
@@ -22,7 +22,7 @@ $row = pg_fetch_assoc($result);
 if (isset($_POST['submit']))
 {
 echo "<ul>
-<form name='update' action='update.php' method='POST' >
+<form name='update' action='validate.php' method='POST' >
 <li>ID:</li><li><input type='text' name='id_updated' value='$row[id]'  /></li>
 <li>Name:</li><li><input type='text' name='name_updated' value='$row[username]' /></li>
 <li> Ingrese Clave:</li><li><input type='text' name='pass_updated' /></li>
