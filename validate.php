@@ -31,7 +31,7 @@ echo "<ul>
 }
 if (isset($_POST['new']))
 {
-$result1 = pg_query($db, "SELECT * FROM users where id = '$_POST[id]'");	
+$result1 = pg_query($db, "SELECT * FROM users where id = '$_POST[id_updated]'");	
 $row = pg_fetch_assoc($result1);
 if (!$result1)
 {
